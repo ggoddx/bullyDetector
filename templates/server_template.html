@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/web.css">
+    <title>Brute Detector</title>
+  </head>
+  <body>
+    <div id="background" class = "container">
+      <div class = "overlay">
+      <!-- moving all text formatting to CSS file
+      <h1 align="center"><font face="Courier" color = "#FF4500" size = "10" >Brute Detector</font></h1>
+      -->
+      <h1>Brute Detector</h1>
+      <!--  liked the stop bullying pic for the PowerPoint, but not really digging it on the webpage
+      <img style="float:right;width:200px;height:200px;" src="static/bullying-stop-sign1.png" alt="HTML5 Icon"/>
+      -->
+      <!--  moving all text formatting to CSS file
+      <h2 align = "center"><font face="Courier" color = "#FF4500" size = "6" >Am I Bully?</font></h2>
+      -->
+      <h2>Am I a Bully?</h2>
+      <h3>Fetch Bullying Tweets</h3>
+      <form action="{{url_for('input_from_user')}}" method="POST">
+        <!--  feel like paragraph tags are more appropriate here <h3>  -->
+          <!--  moving all text formatting to CSS file <font face="Courier" color = "#B22222" size = "6" >  -->
+        <p><input type="radio" name="input" value="username" checked> By Username</p><!--<br>-->
+        <p><input type="radio" name="input" value="search" > By Keyword</p><!--<br>-->
+        <p><input type="radio" name="input" value="custom" > By Custom Tweet</p><!--<br>-->
+          <!--  moving all text formatting to CSS file </font>  -->
+        <!--</h3>-->
+        <!--  table and font stuff probably not necessary  <table>
+          <tr>
+            <td colspan=2>
+              <font face="Courier" color = "#B22222" size = "5" >
+                <br/>  -->
+        <p>Please enter your text here:</p><!--<br/><br/>-->
+        <textarea valign=top name="stext" id="input-text" style="width: 400px; height: 8em" rows=31 cols=7 class = "dark-on-light"></textarea>
+              <!--</font>
+            </td>
+          </tr>
+          <tr>
+            <td align=left>-->
+        <p class = "dark-on-light"><input type="submit" value="submit" onClick="return empty()"/></p>
+            <!--</td>
+          </tr>
+        </table>-->
+      </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function empty()
+      {
+        var x;
+        x = document.getElementById("input-text").value;
+        if (x == "")
+        {
+          alert("Please Enter a valid text and then submit");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

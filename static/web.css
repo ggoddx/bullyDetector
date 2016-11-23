@@ -1,0 +1,36 @@
+/*html, body {
+    margin:0;
+    padding:0;
+    height: 100%;
+}*/
+
+body {
+
+  background-color: #3e3a3a;
+
+}
+#background
+{
+    margin-top: 5%;
+    padding: 0px;
+    background: url("https://images.unsplash.com/photo-1443683263937-3e377546e8a8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f0e510f5dbccb418fb3a9c407485985b");
+    background-size: 100%;
+    background-position: center;
+    color: #f2f2f2;
+}
+
+.overlay
+{
+  /*margin: -20px -15px -10px;*/
+  padding: 10px;
+  /*gradient to transparent courtesy of w3schools http://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans*/
+  background: -webkit-linear-gradient(right bottom, rgba(40, 40, 40, 0), rgba(40, 40, 40, 1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top left, rgba(40, 40, 40, 0), rgba(40, 40, 40, 1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top left, rgba(40, 40, 40, 0), rgba(40, 40, 40, 1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top left, rgba(40, 40, 40, 0), rgba(40, 40, 40, 1)); /* Standard syntax (must be last) */
+}
+
+.dark-on-light
+{
+  color: #333;
+}

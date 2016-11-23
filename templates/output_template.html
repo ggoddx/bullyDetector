@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/web.css">
+    <title>Bullying Traces</title>
+  </head>
+  <body>
+    <div id = "background" class = "container">
+      <div class = "overlay">
+        <h1>Bullying Traces</h1>
+        <ul id="tweets">
+          {% for item in tweet_traces %}
+            {%  if item[1] == 1%}
+              {%  if item[2] == 0 %}
+                <li>Found a bully - </li>
+              {% elif item[2] == 1 %}
+                <li>You are a bully </li>
+              {% elif item[2] == 2 %}
+                <li>Defending the bullied></li>
+              {% elif item[2] == 3 %}
+                <li>Reporter of bullies</li>
+              {% elif item[2] == 4 %}
+                <li>You have been bullied</li>
+              {% endif %}
+              <ul>
+                <li>Tweet : {{ item[0]  }}</li>
+                <li>Label : {{ item[3]  }}</li>
+              </ul>
+            {% else %}
+              <li>No bullying trace</li>
+              <ul>
+                <li>Tweet : {{ item[0]  }}</li>
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
